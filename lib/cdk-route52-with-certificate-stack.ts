@@ -19,7 +19,7 @@ export class CdkRoute52WithCertificateStack extends cdk.Stack {
     props: CdkRoute52WithCertificateStackProps
   ) {
     super(scope, id, props);
-    const dnsName = 'icarolavrador.xyz';
+    const { dnsName } = props;
     this.hostedZone = new PublicHostedZone(this, 'SimpleAppHostedZone', {
       zoneName: dnsName,
     });
